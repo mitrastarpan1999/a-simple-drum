@@ -1,0 +1,109 @@
+body {
+  text-align: center;
+  background: linear-gradient(135deg, #6c5ce7, #a994cf, #d6c5f0);
+  background-size: 400% 400%;
+  animation: gradientBG 8s ease infinite;
+  font-family: "Arvo", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth background animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Title */
+h1 {
+  font-size: 5rem;
+  color: #f8f9fa;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), 3px 0px #DA0463;
+  letter-spacing: 2px;
+  transition: transform 0.3s ease-in-out;
+}
+
+h1:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  color: #DBEDF3;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Drum Button Styling */
+.drum {
+  outline: none;
+  border: 8px solid #3b5554;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  text-align: center;
+  margin: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.drum:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Images for Drum Buttons */
+.w { background: url("./images/tom1.png") center/cover; }
+.a { background: url("./images/tom2.png") center/cover; }
+.s { background: url("./images/tom3.png") center/cover; }
+.d { background: url("./images/tom4.png") center/cover; }
+.j { background: url("./images/snare.png") center/cover; }
+.k { background: url("./images/crash.png") center/cover; }
+.l { background: url("./images/kick.png") center/cover; }
+
+/* Pressed Effect */
+.pressed {
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.4), inset 0 3px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+
+/* Game Over Effect */
+.game-over {
+  background-color: rgba(255, 0, 0, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Set Container */
+.set {
+  margin: 8% auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* For Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  
+  .drum {
+    width: 120px;
+    height: 120px;
+    font-size: 3rem;
+  }
+}
